@@ -1,26 +1,78 @@
-# Netflix_Content_Analysis_and_Clustering_for_Insights
-The "Netflix Content Analysis and Clustering for Insights" project aims to delve into a rich dataset comprising TV shows and movies available on Netflix as of 2019. Derived from Flixable, a third-party Netflix search engine, the dataset offers a wealth of information that can uncover intriguing trends and provide valuable insights into the streaming giant's content landscape.
+1. README.md
+2. Dataset
+3. NETFLIX MOVIES AND TV SHOWS CLUSTERING.csv
+4. EDA
+  ## Numeric & Categoric features
 
-Problem Statement and Motivation: In 2018, Netflix's TV show count had surged threefold since 2010, while its movie collection had dwindled by over 2,000 titles during the same period. The project seeks to explore the dataset comprehensively to unearth additional insights. By merging external datasets such as IMDB ratings and Rotten Tomatoes, we can further enrich our analysis, potentially revealing correlations between content quality and streaming trends.
+       # (a) Univariate Analysis
 
-About the Data: The dataset consists of 7,787 records encompassing 12 features. These features include show_id, type (Movie or TV Show), title, director, cast, country of production, date_added to Netflix, release_year, rating, duration, listed_in genres, and description.
+       # (b) Bivariate Analysis
 
-Project Workflow:
+       # (c) Multivariate Analysis
+5. Data Cleaning
+       # (a)  Duplicated values
 
-Importing Libraries: Begin by importing the necessary Python libraries for data manipulation, analysis, and visualization.
+       # (b)  NaN/Missing values
 
-Loading the Dataset: Load the Netflix dataset into the working environment for exploration and analysis.
+       # (c)  Treating Skewness
 
-Data Summary: Provide a brief summary of the loaded data, including its size, features, and a preview of the initial records.
+       # (d)  Treating Outlier 
+6. Textual Data Preprocessing
+      # (a) Clustering Attributes
 
-Data Cleaning & Data Analysis: Cleanse the dataset by addressing missing values and inconsistencies. Perform exploratory data analysis to uncover initial insights, patterns, and trends.
+      # (b) Removing Stopwords
 
-Feature Selection: Identify relevant features for the subsequent analysis and modeling stages. Consider the potential impact of each feature on the final results.
+      # (c) Lowercasing words
 
-Implementing Different Clustering Methods: Apply various clustering techniques to group the content based on shared characteristics. Consider using features like genre, country, release year, and more to identify meaningful clusters.
+      # (d) Removing Punctuation
 
-Conclusion: Summarize the findings from the clustering analysis, highlighting notable patterns, trends, and relationships within the Netflix content. Draw insightful conclusions that provide value to stakeholders.
+      # (e) Stemming
 
-Future Work: Suggest future directions for the project, such as the creation of a recommendation system leveraging the clustering results. Additionally, consider incorporating topic modeling techniques to gain a deeper understanding of content themes.
+      # (f) Snowball Stemmer
 
-In summary, the "Netflix Content Analysis and Clustering for Insights" project aims to provide a comprehensive analysis of Netflix's content landscape. Through data exploration, cleaning, clustering analysis, and potential future enhancements like recommendation systems, the project seeks to unravel the fascinating trends underlying Netflix's ever-evolving catalog.
+      # (g) Word Vectorization
+
+      # (h) TF-IDF (Term Frequency - Inverse Document Frequency)
+7. Dimenssionality Reduction
+      * PCA (Principle Component Analysis)
+8. Model Building
+   # Clustering Implemention
+
+      # (a) K-Means Clustering
+
+      # (b) Elbow Method
+
+      # (c) Silhoutte Score Analysis
+
+      # (d) Agglomerative Hierarchical Clustering
+
+          * Dendogram
+9. Content Based Recommendation System
+10. Future Work
+11. Conclusion
+In conclusion, the exploratory data analysis (EDA) of Netflix's TV shows and movies clustering has revealed a wealth of insights that shed light on the platform's content distribution, production trends, viewer preferences, and global impact. From the data, several key takeaways emerge:
+
+Content Diversity and Global Reach:
+Netflix's library showcases a rich diversity of content, with a focus on both TV shows and movies. The platform's international TV shows and the popularity of crime and kids' TV genres underscore the global audience's appetite for varied storytelling from different cultures and genres.
+
+Production Trends: Over the years, Netflix has experienced rapid growth in content production. The surge in TV shows and movies from 2016 to 2020 reflects the streaming industry's evolving landscape, with platforms like Netflix responding to the demand for original content.
+
+Global Influences:
+The dominance of the United States in content production highlights its historical and industrial strength, while the rise of Indian content underscores the influence of factors like growing middle-class populations, disposable incomes, and the popularity of streaming services.
+
+Regional Success Stories:
+The prominence of South Korean dramas in the TV show market demonstrates the power of the Korean Wave, while Canada's financial support for TV shows has attracted both domestic and foreign investment.
+
+Viewer Engagement:
+The popularity of Japanese voice actors, crime TV shows, kids' TV, British TV shows, and documentaries showcases viewers' diverse interests, from crime thrillers to educational content, across cultures and genres.
+
+Quality and Collaboration:
+The involvement of prolific directors and actors suggests Netflix's emphasis on quality and collaboration, both within and beyond traditional entertainment industries.
+
+In essence, the EDA illustrates Netflix's commitment to catering to a global audience by offering diverse, engaging, and high-quality content. The platform's strategic content production, collaborations with industry leaders, and focus on viewer preferences position it as a frontrunner in the evolving world of entertainment streaming.
+
+Conclusions drawn from ML Model
+Implemented K-Means Clustering and Agglomerative Hierarchical Clustering, to cluster the Netflix Movies TV show dataset.
+The optimal number of clusters we are getting from K-means is 4, whereas for Agglomerative Hierarchical Clustering the optimal number of clusters are found out to be 2.
+We chose Silhouette Score as the evaluation metric over distortion score because it provides a more intuitive and interpretable result. Also Silhouette score is less sensitive to the shape of the clusters.
+Built a Recommendation system that can help Netflix improve user experience and reduce subscriber churn by providing personalized recommendations to users based on their similarity scores.
